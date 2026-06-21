@@ -8,3 +8,4 @@ server/dress-images/
 server/server/
 .superpowers/
 *.log
+project.private.config.json
