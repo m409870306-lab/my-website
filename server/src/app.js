@@ -13,6 +13,7 @@ export function createApp() {
   app.use(cors());
   app.use(express.json({ limit: "2mb" }));
   app.use("/generated", express.static(path.join(serverRoot, "generated")));
+  app.use("/dress-images", express.static(path.join(serverRoot, "dress-images")));
 
   app.get("/health", (req, res) => {
     res.json({ ok: true });

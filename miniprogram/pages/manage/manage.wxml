@@ -1,0 +1,51 @@
+<view class="page manage">
+  <view>
+    <text class="serif-title title">上传礼服</text>
+    <text class="secondary-text copy">上传你自己的婚纱礼服照片，保存后会出现在礼服选择页。</text>
+  </view>
+
+  <view class="image-uploader" bindtap="chooseImage">
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFill" />
+    <view wx:else class="placeholder">
+      <text>+</text>
+      <text>选择礼服照片</text>
+    </view>
+  </view>
+
+  <view class="form">
+    <view class="field">
+      <text>礼服编号</text>
+      <input placeholder="如 W-2001" value="{{code}}" data-field="code" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>礼服名称</text>
+      <input placeholder="如 缎面 A 字主纱" value="{{name}}" data-field="name" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>分类</text>
+      <input placeholder="主纱 / 晚礼服" value="{{category}}" data-field="category" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>版型</text>
+      <input placeholder="A-line / mermaid" value="{{silhouette}}" data-field="silhouette" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>材质</text>
+      <input placeholder="satin / lace / tulle" value="{{fabric}}" data-field="fabric" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>领口</text>
+      <input placeholder="square neck" value="{{neckline}}" data-field="neckline" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>袖型</text>
+      <input placeholder="sleeveless / long sleeve" value="{{sleeve}}" data-field="sleeve" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>拖尾</text>
+      <input placeholder="chapel train" value="{{train}}" data-field="train" bindinput="onInput" />
+    </view>
+  </view>
+
+  <view class="primary-button" bindtap="saveDress">保存礼服</view>
+</view>

@@ -40,3 +40,14 @@
   background: #ffffff;
   color: #5f554b;
 }
+
+.ghost-button {
+  height: 88rpx;
+  border-radius: 999rpx;
+  border: 1rpx solid #d8c7b2;
+  color: #5f554b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}

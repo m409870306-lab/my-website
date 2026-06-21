@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import multer from "multer";
 import { Router } from "express";
-import { dresses } from "../data/dresses.js";
+import { findActiveDress } from "../lib/dressStore.js";
 import { generateTryOnImage } from "../lib/openaiImageClient.js";
 import { buildTryOnPrompt } from "../lib/promptBuilder.js";
 import { taskStore } from "../lib/taskStore.js";
@@ -58,7 +58,7 @@ tryonRouter.post("/", upload.array("customerImages", 3), async (req, res) => {
     return res.status(400).json({ error: "本人参考照最多上传 3 张" });
   }
 
-  const dress = dresses.find((item) => item.id === req.body.dressId && item.isActive);
+  const dress = findActiveDress(req.body.dressId);
   if (!dress) {
     return res.status(400).json({ error: "请选择有效礼服" });
   }
@@ -89,7 +89,7 @@ tryonRouter.post("/", upload.array("customerImages", 3), async (req, res) => {
       });
       const resultImage = await generateTryOnImage({
         prompt,
-        imagePaths: files.map((file) => file.path),
+        imagePaths: [...files.map((file) => file.path), dress.imagePath].filter(Boolean),
         taskId: task.id,
       });
       taskStore.update(task.id, {

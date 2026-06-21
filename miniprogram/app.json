@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/upload/upload",
     "pages/body/body",
+    "pages/manage/manage",
     "pages/dresses/dresses",
     "pages/generating/generating",
     "pages/result/result"

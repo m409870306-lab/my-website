@@ -52,3 +52,23 @@ export function uploadTryOn({ imagePaths, bodyInfo, dressId }) {
     });
   });
 }
+
+export function uploadDress({ imagePath, dress }) {
+  return new Promise((resolve, reject) => {
+    wx.uploadFile({
+      url: `${baseUrl()}/api/dresses`,
+      filePath: imagePath,
+      name: "dressImage",
+      formData: dress,
+      success: (res) => {
+        const data = JSON.parse(res.data);
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          resolve(data.dress);
+        } else {
+          reject(new Error(data.error || "上传礼服失败"));
+        }
+      },
+      fail: () => reject(new Error("上传礼服失败，请检查网络")),
+    });
+  });
+}

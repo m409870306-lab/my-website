@@ -7,7 +7,8 @@
   <view class="dress-grid">
     <block wx:for="{{dresses}}" wx:key="id">
       <view class="dress-card {{selectedId === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectDress">
-        <view class="dress-art"></view>
+        <image wx:if="{{item.displayImageUrl}}" class="dress-image" src="{{item.displayImageUrl}}" mode="aspectFill" />
+        <view wx:else class="dress-art"></view>
         <text class="dress-name">{{item.name}}</text>
         <text class="dress-meta">{{item.code}} · {{item.category}}</text>
       </view>

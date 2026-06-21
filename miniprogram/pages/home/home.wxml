@@ -12,4 +12,5 @@
   </view>
 
   <view class="primary-button" bindtap="startTryOn">开始试穿</view>
+  <view class="ghost-button" bindtap="manageDresses">上传礼服</view>
 </view>
