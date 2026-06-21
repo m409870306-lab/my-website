@@ -1,0 +1,18 @@
+<view class="page dresses">
+  <view>
+    <text class="serif-title title">选择礼服</text>
+    <text class="secondary-text copy">先用店内热款试穿。正式版会使用你上传的真实礼服照片。</text>
+  </view>
+
+  <view class="dress-grid">
+    <block wx:for="{{dresses}}" wx:key="id">
+      <view class="dress-card {{selectedId === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectDress">
+        <view class="dress-art"></view>
+        <text class="dress-name">{{item.name}}</text>
+        <text class="dress-meta">{{item.code}} · {{item.category}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="primary-button" bindtap="next">生成试穿图</view>
+</view>

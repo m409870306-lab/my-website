@@ -1,0 +1,11 @@
+{
+  "name": "wedding-dress-ai-tryon",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "server:install": "npm --prefix server install",
+    "server:dev": "npm --prefix server run dev",
+    "server:test": "npm --prefix server test",
+    "test": "npm run server:test"
+  }
+}

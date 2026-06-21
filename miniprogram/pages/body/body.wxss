@@ -1,0 +1,41 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+.title {
+  display: block;
+  font-size: 52rpx;
+}
+
+.copy {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 27rpx;
+}
+
+.form {
+  border: 1rpx solid #eadfd4;
+  border-radius: 28rpx;
+  background: #ffffff;
+  padding: 8rpx 28rpx;
+}
+
+.field {
+  min-height: 100rpx;
+  border-bottom: 1rpx solid #eee4da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+  color: #5f554b;
+}
+
+.field:last-child {
+  border-bottom: 0;
+}
+
+.field input {
+  text-align: right;
+}

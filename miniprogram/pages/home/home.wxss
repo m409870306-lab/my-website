@@ -1,0 +1,42 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 36rpx;
+}
+
+.hero {
+  padding: 44rpx 0 20rpx;
+}
+
+.eyebrow {
+  color: #9b7b52;
+  font-size: 22rpx;
+  letter-spacing: 2rpx;
+  text-transform: uppercase;
+}
+
+.title {
+  display: block;
+  margin-top: 18rpx;
+  font-size: 68rpx;
+  line-height: 1.08;
+}
+
+.copy {
+  display: block;
+  margin-top: 22rpx;
+  font-size: 28rpx;
+}
+
+.process {
+  display: grid;
+  gap: 18rpx;
+}
+
+.process-item {
+  padding: 28rpx;
+  border: 1rpx solid #e9ded3;
+  border-radius: 24rpx;
+  background: #ffffff;
+  color: #5f554b;
+}

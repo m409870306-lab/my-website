@@ -1,0 +1,44 @@
+.generating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24rpx;
+}
+
+.loader {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 8rpx solid #eadfd4;
+  border-top-color: #9b7b52;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-size: 50rpx;
+}
+
+.copy {
+  font-size: 27rpx;
+}
+
+.steps {
+  width: 100%;
+  display: grid;
+  gap: 14rpx;
+  margin-top: 28rpx;
+}
+
+.steps view {
+  padding: 24rpx;
+  border-radius: 22rpx;
+  background: #ffffff;
+  color: #5f554b;
+}

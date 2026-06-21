@@ -1,0 +1,25 @@
+<view class="page body">
+  <view>
+    <text class="serif-title title">体型信息</text>
+    <text class="secondary-text copy">可选填写。信息越完整，礼服腰线、肩宽和裙摆比例越稳定。</text>
+  </view>
+
+  <view class="form">
+    <view class="field">
+      <text>身高 cm</text>
+      <input type="number" placeholder="可选" value="{{height}}" data-field="height" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>体重 kg</text>
+      <input type="number" placeholder="可选" value="{{weight}}" data-field="weight" bindinput="onInput" />
+    </view>
+    <view class="field">
+      <text>平时尺码</text>
+      <picker range="{{sizes}}" bindchange="onSizeChange">
+        <text>{{size || '可选'}}</text>
+      </picker>
+    </view>
+  </view>
+
+  <view class="primary-button" bindtap="next">选择礼服</view>
+</view>

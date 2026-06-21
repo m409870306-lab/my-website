@@ -1,0 +1,16 @@
+<view class="result-page">
+  <view class="result-title">
+    <text class="serif-title title">试穿效果</text>
+    <text class="meta">{{dress.code}} · {{dress.name}}</text>
+  </view>
+
+  <view class="image-wrap">
+    <image wx:if="{{task.resultImage}}" class="result-image" src="{{task.resultImage}}" mode="aspectFit" />
+    <view wx:else class="empty-image">暂无结果图</view>
+  </view>
+
+  <view class="actions">
+    <view class="primary-button">保存并咨询</view>
+    <view class="ghost-button" bindtap="restart">重新试穿</view>
+  </view>
+</view>

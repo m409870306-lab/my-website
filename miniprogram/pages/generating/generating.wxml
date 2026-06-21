@@ -1,0 +1,12 @@
+<view class="page generating">
+  <view class="loader"></view>
+  <text class="serif-title title">正在生成</text>
+  <text class="secondary-text copy">{{statusText}}</text>
+
+  <view class="steps">
+    <view>锁定本人相似度</view>
+    <view>调整肩宽、腰线和裙摆</view>
+    <view>保留礼服材质与拖尾</view>
+    <view>自然轻美化</view>
+  </view>
+</view>
