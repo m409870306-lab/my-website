@@ -1,0 +1,24 @@
+<view class="page upload">
+  <view>
+    <text class="serif-title title">上传本人照</text>
+    <text class="secondary-text copy">正面照必传，最多 3 张。照片越清晰，相似度和体型比例越稳定。</text>
+  </view>
+
+  <view class="slots">
+    <block wx:for="{{slots}}" wx:key="*this">
+      <view class="slot" bindtap="chooseImages">
+        <view class="preview {{imagePaths[index] ? 'has-image' : ''}}">
+          <image wx:if="{{imagePaths[index]}}" src="{{imagePaths[index]}}" mode="aspectFill" />
+          <text wx:else>+</text>
+        </view>
+        <view>
+          <text class="slot-title">{{item}}</text>
+          <text class="slot-copy">{{index === 0 ? '必传：脸部与主体姿态' : '可选：增强生成稳定性'}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="tips">请使用光线清晰、无遮挡、无强滤镜的照片。</view>
+  <view class="primary-button" bindtap="next">下一步</view>
+</view>

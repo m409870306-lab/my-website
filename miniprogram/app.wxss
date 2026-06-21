@@ -1,0 +1,35 @@
+page {
+  min-height: 100%;
+  background: #fbfaf7;
+  color: #211d19;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 32rpx;
+  background: #fbfaf7;
+}
+
+.serif-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  color: #211d19;
+}
+
+.primary-button {
+  height: 92rpx;
+  border-radius: 999rpx;
+  background: #211d19;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+
+.secondary-text {
+  color: #74695e;
+  line-height: 1.6;
+}

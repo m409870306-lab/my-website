@@ -1,0 +1,15 @@
+<view class="page home">
+  <view class="hero">
+    <text class="eyebrow">Premium bridal try-on</text>
+    <text class="serif-title title">婚纱礼服 AI 试穿</text>
+    <text class="secondary-text copy">上传本人正面照，选择店内礼服，生成保留本人相似度并按体型适配的试穿效果图。</text>
+  </view>
+
+  <view class="process">
+    <view class="process-item">上传本人照</view>
+    <view class="process-item">填写体型信息</view>
+    <view class="process-item">选择礼服</view>
+  </view>
+
+  <view class="primary-button" bindtap="startTryOn">开始试穿</view>
+</view>
